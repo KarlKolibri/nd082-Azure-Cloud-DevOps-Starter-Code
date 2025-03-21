@@ -1,14 +1,6 @@
-# Azure Infrastructure Operations Project: Deploying a scalable IaaS web server in Azure
+# Udacity Azure DevOps Project 1
 
-### Introduction
-For this project, you will write a Packer template and a Terraform template to deploy a customizable, scalable web server in Azure.
-
-### Getting Started
-1. Clone this repository
-
-2. Create your infrastructure as code
-
-3. Update this README to reflect how someone would use your code.
+Deploys Azure policy and a Packer-built image via Terraform.
 
 ### Dependencies
 1. Create an [Azure Account](https://portal.azure.com) 
@@ -16,9 +8,49 @@ For this project, you will write a Packer template and a Terraform template to d
 3. Install [Packer](https://www.packer.io/downloads)
 4. Install [Terraform](https://www.terraform.io/downloads.html)
 
-### Instructions
-**Your words here**
+## Prerequisites
 
-### Output
-**Your words here**
+- Azure account
+- Packer
+- Terraform
+
+## Deployment
+
+1.  **Set Azure Credentials:**
+    ```bash
+    export AZ_CLIENT_ID="..."
+    export AZ_CLIENT_SECRET="..."
+    export AZ_TENANT_ID="..."
+    export AZ_SUBSCRIPTION_ID="..."
+    ```
+    (Replace placeholders with your values.)
+
+2.  **Create Resource Group:**
+    Create `udacity-assignment1-rg` (or your preferred name) via portal or CLI.
+
+3.  **Deploy Policy:**
+    Deploy and assign policy to the resource group (e.g., via Azure portal).
+
+4.  **Build Packer Image:**
+    ```bash
+    packer build packer/server.json
+    ```
+
+5.  **Terraform Setup:**
+    ```bash
+    terraform init
+    terraform plan -out solution.plan
+    ```
+
+6.  **Terraform Deploy:**
+    ```bash
+    terraform apply solution.plan
+    ```
+
+## Cleanup
+
+Destroy infrastructure:
+
+```bash
+terraform destroy
 
