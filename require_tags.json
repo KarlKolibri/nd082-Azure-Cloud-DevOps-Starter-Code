@@ -1,0 +1,36 @@
+{
+  "properties": {
+    "policyType": "Custom",
+    "mode": "Indexed",
+    "metadata": {
+      "createdBy": "c0d19eaa-9418-4373-a70c-1a2406993514",
+      "createdOn": "2025-03-21T18:00:14.9542345Z",
+      "updatedBy": null,
+      "updatedOn": null
+    },
+    "version": "1.0.0",
+    "policyRule": {
+      "if": {
+        "field": "tags",
+        "exists": "false"
+      },
+      "then": {
+        "effect": "deny"
+      }
+    },
+    "versions": [
+      "1.0.0"
+    ]
+  },
+  "id": "/subscriptions/a9ab978b-a5d4-42b1-a453-fe2690ceb40f/providers/Microsoft.Authorization/policyDefinitions/TagsPolicyDefinition",
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "name": "TagsPolicyDefinition",
+  "systemData": {
+    "createdBy": "odl_user_276007@udacityhol.onmicrosoft.com",
+    "createdByType": "User",
+    "createdAt": "2025-03-21T18:00:14.8665351Z",
+    "lastModifiedBy": "odl_user_276007@udacityhol.onmicrosoft.com",
+    "lastModifiedByType": "User",
+    "lastModifiedAt": "2025-03-21T18:00:14.8665351Z"
+  }
+}
