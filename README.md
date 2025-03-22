@@ -36,13 +36,16 @@ Deploys Azure policy and a Packer-built image via Terraform.
     packer build packer/server.json
     ```
 
-5.  **Terraform Setup:**
+5.  **Adjust Terraform variables**
+    Adjust the varbiales in vars.tf. This lets you specify the resource group name, location and vm-size.
+
+6.  **Terraform Setup:**
     ```bash
     terraform init
     terraform plan -out solution.plan
     ```
 
-6.  **Terraform Deploy:**
+7.  **Terraform Deploy:**
     ```bash
     terraform apply solution.plan
     ```
